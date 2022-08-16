@@ -1,4 +1,4 @@
-public class Transport {
+public abstract class Transport {
     protected String modelName;
     protected int wheelsCount;
 
