@@ -9,6 +9,7 @@ public class Main {
 
         ServiceStation.check(car);
         ServiceStation.check(bicycle2);
+        ServiceStation.check(truck);
         ServiceStation.check(truck2);
     }
 }
