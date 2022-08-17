@@ -1,8 +1,8 @@
-public abstract class ServiceStation {
+public abstract class Transport implements ServiceStationImpl {
     protected String modelName;
     protected int wheelsCount;
 
-    public ServiceStation(String modelName, int wheelsCount) {
+    public Transport(String modelName, int wheelsCount) {
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
     }
@@ -22,18 +22,11 @@ public abstract class ServiceStation {
                 ", wheelsCount=" + wheelsCount +
                 '}';
     }
-    public void checkAuto() {
-    }
-    public void changeTyre(ServiceStation transport) {
+
+    void changeTyre(Transport transport) {
         System.out.println("Обслуживаем " + transport.getModelName());
         for (int i = 0; i < transport.getWheelsCount(); i++) {
             updateTyre();
         }
-    }
-
-    public static void check(ServiceStation transport) {
-        transport.changeTyre(transport);
-        transport.checkAuto();
-        System.out.println("------------------");
     }
 }

@@ -1,4 +1,4 @@
-public class Bicycle extends ServiceStation {
+public class Bicycle extends Transport {
     public Bicycle(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
@@ -8,5 +8,8 @@ public class Bicycle extends ServiceStation {
                 "modelName='" + modelName + '\'' +
                 ", wheelsCount=" + wheelsCount +
                 '}';
+    }
+    @Override
+    public void checkAuto() {
     }
 }

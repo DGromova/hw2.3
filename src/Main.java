@@ -1,15 +1,20 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        ServiceStation car = new Car("car", 4);
-        ServiceStation car2 = new Car("car2", 4);
-        ServiceStation truck = new Truck("truck", 6);
-        ServiceStation truck2 = new Truck("truck2", 8);
-        ServiceStation bicycle = new Bicycle("bicycle", 2);
-        ServiceStation bicycle2 = new Bicycle("bicycle2", 2);
 
-        ServiceStation.check(car);
-        ServiceStation.check(bicycle2);
-        ServiceStation.check(truck);
-        ServiceStation.check(truck2);
+        Transport car = new Car("car", 4);
+        Transport car2 = new Car("car2", 4);
+        Transport truck = new Truck("truck", 6);
+        Transport truck2 = new Truck("truck2", 8);
+        Transport bicycle = new Bicycle("bicycle", 2);
+        Transport bicycle2 = new Bicycle("bicycle2", 2);
+
+        ServiceStationImpl.check(car);
+        ServiceStationImpl.check(car2);
+        ServiceStationImpl.check(bicycle);
+        ServiceStationImpl.check(bicycle2);
+        ServiceStationImpl.check(truck);
+        ServiceStationImpl.check(truck2);
     }
 }
