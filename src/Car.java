@@ -1,6 +1,9 @@
-public class Car extends Transport implements AutoCheck {
+public class Car extends Transport {
         public Car (String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
+    }
+    public static void checkEngine() {
+        System.out.println("Проверяем двигатель");
     }
 
     @Override
@@ -10,5 +13,8 @@ public class Car extends Transport implements AutoCheck {
                 ", wheelsCount=" + wheelsCount +
                 '}';
     }
-
+    @Override
+    public void checkAuto() {
+        checkEngine();
+    }
 }
