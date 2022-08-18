@@ -1,8 +1,8 @@
-public interface ServiceStationImpl {
+public interface ServiceStation {
     static void check(Transport transport) {
         transport.changeTyre(transport);
-        transport.checkAuto();
+        transport.checkTransport();
         System.out.println("------------------");
     }
-    void checkAuto();
+    void checkTransport();
 }

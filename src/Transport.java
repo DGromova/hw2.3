@@ -1,4 +1,4 @@
-public abstract class Transport implements ServiceStationImpl {
+public abstract class Transport implements ServiceStation {
     protected String modelName;
     protected int wheelsCount;
 
@@ -6,7 +6,7 @@ public abstract class Transport implements ServiceStationImpl {
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
     }
-    public static void updateTyre() { System.out.println("Меняем покрышку"); }
+    static void updateTyre() { System.out.println("Меняем покрышку"); }
 
     public String getModelName() {
         return modelName;
@@ -15,18 +15,17 @@ public abstract class Transport implements ServiceStationImpl {
     public int getWheelsCount() {
         return wheelsCount;
     }
+    void changeTyre(Transport transport) {
+        System.out.println("Обслуживаем " + transport.getModelName());
+        for (int i = 0; i < transport.getWheelsCount(); i++) {
+            updateTyre();
+        }
+    }
     @Override
     public String toString() {
         return "Bicycle{" +
                 "modelName='" + modelName + '\'' +
                 ", wheelsCount=" + wheelsCount +
                 '}';
-    }
-
-    void changeTyre(Transport transport) {
-        System.out.println("Обслуживаем " + transport.getModelName());
-        for (int i = 0; i < transport.getWheelsCount(); i++) {
-            updateTyre();
-        }
     }
 }

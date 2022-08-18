@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -10,11 +8,11 @@ public class Main {
         Transport bicycle = new Bicycle("bicycle", 2);
         Transport bicycle2 = new Bicycle("bicycle2", 2);
 
-        ServiceStationImpl.check(car);
-        ServiceStationImpl.check(car2);
-        ServiceStationImpl.check(bicycle);
-        ServiceStationImpl.check(bicycle2);
-        ServiceStationImpl.check(truck);
-        ServiceStationImpl.check(truck2);
+        ServiceStation.check(car);
+        ServiceStation.check(car2);
+        ServiceStation.check(bicycle);
+        ServiceStation.check(bicycle2);
+        ServiceStation.check(truck);
+        ServiceStation.check(truck2);
     }
 }
