@@ -1,4 +1,4 @@
-public abstract class Transport implements ServiceStation {
+public abstract class Transport {
     protected String modelName;
     protected int wheelsCount;
 
@@ -15,11 +15,8 @@ public abstract class Transport implements ServiceStation {
     public int getWheelsCount() {
         return wheelsCount;
     }
-    void changeTyre(Transport transport) {
-        System.out.println("Обслуживаем " + transport.getModelName());
-        for (int i = 0; i < transport.getWheelsCount(); i++) {
-            updateTyre();
-        }
+    public void checkTransport() {
+        System.out.println("Проверяем транспорт");
     }
     @Override
     public String toString() {
